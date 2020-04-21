@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Date.hpp" />
+    <ClInclude Include="Period.hpp" />
+    <ClInclude Include="Reservation.hpp" />
+    <ClInclude Include="Room.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Period.cpp" />
+    <ClCompile Include="Reservation.cpp" />
+    <ClCompile Include="Room.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{B492325B-B589-4424-8FD3-50B3002188EC}</ProjectGuid>
@@ -137,8 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
