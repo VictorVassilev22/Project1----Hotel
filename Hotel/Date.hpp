@@ -10,6 +10,10 @@ const unsigned MAX_DAYS_YEAR= 365;
 const unsigned MAX_MONTH = 12;
 const unsigned MIN_MONTH = 1;
 const unsigned MIN_DAY = 1;
+const unsigned YEAR_SYMBOLS = 5;
+const unsigned MONTH_SYMBOLS = 3;
+const unsigned DAY_SYMBOLS = 3;
+const size_t DATE_STR_LENGTH = 11;
 
 class Date {
 	unsigned year;
@@ -31,6 +35,7 @@ public:
 	bool operator>=(Date const&) const;
 	unsigned operator-(Date const&) const;
 	void printDate(std::ostream&) const;
+	void readDate(std::istream&);
 };
 
 #endif

@@ -103,26 +103,37 @@ unsigned Room::reportRoom(Date& const from, Date& const to) const
 
 void Room::makeReservation(Date& const sd, Date& const ed, char const* note)
 {
+	if (reservations == nullptr)
+		reservations = new(std::nothrow) Reservation[100];
+	//TODO: make resizable reservations
+
 	Period p(sd, ed);
 	Reservation r(p, note, true);
 
 	if (freeCheck(r)) {
 		reservations[reservationsCount] = r;
 		reservationsCount++;
+		std::cout << "Reservation made successfuly" << std::endl;
 	}
 }
 
 void Room::makeReservation(Period p, char const* note)
 {
+	if (reservations == nullptr)
+		reservations = new(std::nothrow) Reservation[100];
 	Reservation r(p, note, true);
 	if (freeCheck(r)) {
 		reservations[reservationsCount] = r;
 		reservationsCount++;
+		std::cout << "Reservation made successfuly" << std::endl;
 	}
 }
 
 void Room::setUnavailable(Date& const sd, Date& const ed, char const* note)
 {
+	if (reservations == nullptr)
+		reservations = new(std::nothrow) Reservation[100];
+
 	Period p(sd, ed);
 	Reservation r(p, note, false);
 

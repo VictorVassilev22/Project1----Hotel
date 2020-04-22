@@ -155,6 +155,90 @@ void Date::swap(Date& d1, Date& d2) const
 	d2 = temp;
 }
 
-void Date::printDate(std::ostream& os) const {
-	os << year << " - " << month << " - " << day;
+void Date::printDate(std::ostream& os) const{
+	os << year << "-" << month << "-" << day;
+}
+
+void readingDateError() {
+	std::cout << "Error reading date." << std::endl;
+}
+bool isDigit(char c) {
+	return c >= '0' && c <= '9';
+}
+bool isDash(char c) {
+	return c == '-';
+}
+
+bool readFormat(char format[], size_t size, std::istream& in) {
+	char ch;
+	size_t i;
+	for (i = 0; i < size-1; i++)
+	{
+		in.get(ch);
+		if (!isDigit(ch)) {
+			readingDateError();
+			return false;
+		}
+		format[i] = ch;
+	}
+	format[i] = '\0';
+	return true;
+}
+
+void setWithStr(char str[], unsigned& param, size_t symbols) {
+	size_t i = 0;
+	unsigned mult = pow(10, symbols - 2);
+	unsigned digit;
+	while (mult > 0)
+	{
+		digit = str[i] - '0';
+		param += digit * mult;
+		mult /= 10;
+		i++;
+	}
+}
+
+
+void Date::readDate(std::istream& in)
+{
+	char ch = in.peek();
+	char day_format[DAY_SYMBOLS];
+	char month_format[MONTH_SYMBOLS];
+	char year_format[YEAR_SYMBOLS];
+
+	while (ch == ' ' || ch == '\n' || ch == '\0') {
+		in.get();
+		ch = in.peek();
+	}
+
+	if (!readFormat(year_format, YEAR_SYMBOLS, in))
+		return;
+
+	in.get(ch);
+
+	if (!isDash(ch)) {
+		readingDateError();
+		return;
+	}
+
+	if (!readFormat(month_format, MONTH_SYMBOLS, in))
+		return;
+
+	in.get(ch);
+
+	if (!isDash(ch)) {
+		readingDateError();
+		return;
+	}
+
+	if (!readFormat(day_format, DAY_SYMBOLS, in))
+		return;
+	unsigned _year = 0;
+	setWithStr(year_format, _year, YEAR_SYMBOLS);
+	unsigned _month = 0;
+	setWithStr(month_format, _month, MONTH_SYMBOLS);
+	unsigned _day = 0;
+	setWithStr(day_format, _day, DAY_SYMBOLS);
+
+	*this = Date(_year, _month, _day);
 }
