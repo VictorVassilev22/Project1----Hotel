@@ -19,7 +19,7 @@ Period::Period(Date& const sd, Date& const ed)
 	}
 }
 
-unsigned Period::getDays()
+unsigned Period::getDays() const
 {
 	if (startDate == endDate)
 		return 0;
@@ -27,13 +27,19 @@ unsigned Period::getDays()
 		return endDate - startDate;
 }
 
-Period& Period::operator=(Period& const other)
+Period& Period::operator=(Period const& other)
 {
 	if (this != &other) {
 		startDate = other.startDate;
 		endDate = other.endDate;
 	}
 	return *this;
+}
+
+bool Period::isDateInPeriod(Date& const d) const
+{
+	return d >= startDate && d <= endDate;
+	
 }
 
 

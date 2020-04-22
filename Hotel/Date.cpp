@@ -1,7 +1,9 @@
 #include "Date.hpp"
 
+unsigned const dayCounts[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
 Date::Date(unsigned y, unsigned m, unsigned d) {
-	if (year<MIN_YEAR || year>MAX_YEAR) {
+	if (y<MIN_YEAR || y>MAX_YEAR) {
 		std::cerr << "Year not in bounds (" << MIN_YEAR << " - " << MAX_YEAR << ") changing to " << MIN_YEAR << "..." << std::endl;
 		year = MIN_YEAR;
 	}
@@ -9,20 +11,23 @@ Date::Date(unsigned y, unsigned m, unsigned d) {
 		year = y;
 
 
-	if (month<MIN_MONTH || month>MAX_MONTH) {
+	if (m<MIN_MONTH || m>MAX_MONTH) {
 		std::cerr << "Month not in bounds (" << MIN_MONTH << " - " << MAX_MONTH << ") changing to " << MIN_MONTH << "..." << std::endl;
 		month = MIN_MONTH;
 	}
 	else
 		month = m;
 
-	day_count = (unsigned)DayCounts(month - 1);
-	if (day > day_count || day < MIN_DAY) {
+	day_count = dayCounts[month - 1];
+	if (d > day_count || d < MIN_DAY) {
 
-		if (year % 4 == 0 && month == 2 && day == FEB + 1) {
+		if (year % 4 == 0 && month == 2 && day == day_count + 1) {
 			day = d;
-		}else
+		}
+		else {
 			std::cerr << "Invalid day. This month has " << day_count << " days, (you cannot enter \"0\"). Changing to \"1\"." << std::endl;
+			day = 1;
+		}
 	}
 	else
 		day = d;
@@ -85,6 +90,8 @@ bool Date::operator<=(Date const& other) const {
 
 	if (*this == other || *this < other)
 		return true;
+	else
+		return false;
 
 }
 
@@ -92,7 +99,8 @@ bool Date::operator>=(Date const& other) const {
 
 	if (*this == other || *this > other)
 		return true;
-
+	else
+		return false;
 }
 
 unsigned Date::operator-(Date const& other) const
@@ -102,8 +110,7 @@ unsigned Date::operator-(Date const& other) const
 
 unsigned Date::getDaysBetween(Date sooner, Date later) const
 {
-	unsigned hasSecondSwap = 0;
-	unsigned hasThirdSwap = 0;
+	unsigned secondSwap = 0;
 	if (sooner > later) {
 		swap(sooner, later);
 	}
@@ -117,26 +124,28 @@ unsigned Date::getDaysBetween(Date sooner, Date later) const
 	}
 	if (sooner > later) {
 		swap(sooner, later);
-		hasSecondSwap++;
+		secondSwap++;
 	}
 	unsigned daysToLaterMonth = 0;
 	while (sooner.month < later.month) {
 		if (sooner.year % 4 == 0 && sooner.month == 2)
-			daysToLaterMonth += DayCounts(sooner.month - 1) + 1;
+			daysToLaterMonth += dayCounts[sooner.month - 1] + 1;
 		else
-			daysToLaterMonth += DayCounts(sooner.month - 1);
+			daysToLaterMonth += dayCounts[sooner.month - 1];
 		sooner.month++;
 	}
+	unsigned thirdSwap = secondSwap;
 	if (sooner > later) {
 		swap(sooner, later);
-		hasThirdSwap++;
+		thirdSwap++;
 	}
 	unsigned daysToLaterDay = 0;
 	while (sooner.day < later.day) {
+		sooner.day++;
 		daysToLaterDay++;
 	}
-	return (unsigned)(daysToLaterMonth+daysToLaterMonth*pow(-1, hasSecondSwap)
-		+daysToLaterDay*pow(-1, hasThirdSwap));
+	return (unsigned)(daysToLaterYear+daysToLaterMonth*pow(-1, secondSwap)
+		+daysToLaterDay*pow(-1, thirdSwap));
 }
 
 void Date::swap(Date& d1, Date& d2) const

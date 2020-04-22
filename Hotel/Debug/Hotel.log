@@ -1,0 +1,17 @@
+﻿  Date.cpp
+  main.cpp
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(11,40): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(16,33): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(16,64): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(23,39): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(24,38): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(15,35): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(26,28): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(27,33): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(27,46): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,37): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,53): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(30,36): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(30,52): warning C4227: anachronism used: qualifiers on reference are ignored
+  Generating Code...
+  Hotel.vcxproj -> C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Debug\Hotel.exe

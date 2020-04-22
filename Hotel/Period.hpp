@@ -9,8 +9,11 @@ class Period {
 public:
 	Period();
 	Period(Date& const sd, Date& const ed);
-	unsigned getDays();
-	Period& operator=(Period& const);
+	unsigned getDays() const;
+	Period& operator=(Period const&);
+	Date getStartDate() const { return startDate; }
+	Date getEndDate() const { return endDate; }
+	bool isDateInPeriod(Date& const) const;
 };
 
 #endif
