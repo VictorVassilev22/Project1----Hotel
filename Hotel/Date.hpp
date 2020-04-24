@@ -36,6 +36,9 @@ public:
 	unsigned operator-(Date const&) const;
 	void printDate(std::ostream&) const;
 	void readDate(std::istream&);
+	friend std::ostream& operator<<(std::ostream&, Date const&);
 };
+
+std::ostream& operator<<(std::ostream&, Date const&);
 
 #endif

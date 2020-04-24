@@ -80,40 +80,48 @@ bool Room::checkDate(Date& const d) const
 	return true;
 }
 
-unsigned Room::reportRoom(Date& const from, Date& const to) const
+bool Room::reportRoom(Date& const from, Date& const to, unsigned& daysCount) const
 {
-	unsigned daysCount = 0;
 	Date start;
 	Date end;
+	unsigned initial = daysCount;
+	Reservation r;
 	for (size_t i = 0; i < reservationsCount; i++)
 	{
-		start = reservations[i].getStartDate();
-		end = reservations[i].getEndDate();
-		if (from <= start && to >= end)
-			daysCount += (end - start);
-		else if (from > start && to < end)
-			daysCount += (to - from);
-		else if (from <= start && start < to && to <= end)
-			daysCount += (to - start);
-		else if (start <= from && from < end && end <= to)
-			daysCount += (end - from);
+		r = reservations[i];
+
+		if (!r.isAvailable())
+			continue;
+
+		start = r.getStartDate();
+		end = r.getEndDate();
+		if (from <= end) {
+			if (from <= start && to >= end)
+				daysCount += (end - start);
+			else if (from > start && to < end)
+				daysCount += (to - from);
+			else if (from <= start && start < to && to <= end)
+				daysCount += (to - start);
+			else if (start <= from && from < end && end <= to)
+				daysCount += (end - from);
+		}
+		//else if(to<start) return (when reservations are sorted, return value here)
 	}
-	return daysCount;
+	return daysCount > initial;
 }
 
-void Room::makeReservation(Date& const sd, Date& const ed, char const* note)
+void Room::makeReservation(Date& const sd, Date& const ed, char const* note, bool isAvailable)
 {
 	if (reservations == nullptr)
 		reservations = new(std::nothrow) Reservation[100];
 	//TODO: make resizable reservations
 
 	Period p(sd, ed);
-	Reservation r(p, note, true);
+	Reservation r(p, note, isAvailable);
 
 	if (freeCheck(r)) {
 		reservations[reservationsCount] = r;
 		reservationsCount++;
-		std::cout << "Reservation made successfuly" << std::endl;
 	}
 }
 
@@ -125,20 +133,16 @@ void Room::makeReservation(Period p, char const* note)
 	if (freeCheck(r)) {
 		reservations[reservationsCount] = r;
 		reservationsCount++;
-		std::cout << "Reservation made successfuly" << std::endl;
 	}
 }
 
-void Room::setUnavailable(Date& const sd, Date& const ed, char const* note)
+void Room::printRoom(std::ostream& out) const
 {
-	if (reservations == nullptr)
-		reservations = new(std::nothrow) Reservation[100];
+	out << "|Room: " << number << " |Beds: " << beds <<
+		" |Reservations: " << reservationsCount << " |Currently: ";
+	if (taken)
+		out << "taken|";
+	else
+		out << "free|";
 
-	Period p(sd, ed);
-	Reservation r(p, note, false);
-
-	if (freeCheck(r)) {
-		reservations[reservationsCount] = r;
-		reservationsCount++;
-	}
 }

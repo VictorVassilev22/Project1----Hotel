@@ -108,6 +108,11 @@ unsigned Date::operator-(Date const& other) const
 	return getDaysBetween(*this, other);
 }
 
+std::ostream& operator<<(std::ostream& out, Date const& d)
+{
+	return out << d.year << "-" << d.month << "-" << d.day;
+}
+
 unsigned Date::getDaysBetween(Date sooner, Date later) const
 {
 	unsigned secondSwap = 0;
@@ -242,3 +247,4 @@ void Date::readDate(std::istream& in)
 
 	*this = Date(_year, _month, _day);
 }
+
