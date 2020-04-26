@@ -1,0 +1,38 @@
+﻿  Room.cpp
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(11,40): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(16,33): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(16,64): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(23,39): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(24,38): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(15,35): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(27,28): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,29): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,42): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(29,37): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(29,53): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(31,36): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(31,52): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(35,42): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(73,35): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(83,39): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(83,55): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(107,42): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(107,58): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(135,41): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.cpp(135,57): warning C4227: anachronism used: qualifiers on reference are ignored
+  main.cpp
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(11,40): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Period.hpp(16,33): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(16,64): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(23,39): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Reservation.hpp(24,38): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(15,35): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(27,28): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,29): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(28,42): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(29,37): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(29,53): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(31,36): warning C4227: anachronism used: qualifiers on reference are ignored
+C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Hotel\Room.hpp(31,52): warning C4227: anachronism used: qualifiers on reference are ignored
+  Generating Code...
+  Hotel.vcxproj -> C:\Users\VivoBook_X512DA\source\repos\Project1----Hotel\Hotel\Debug\Hotel.exe
