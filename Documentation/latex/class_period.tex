@@ -1,0 +1,146 @@
+\hypertarget{class_period}{}\doxysection{Period Class Reference}
+\label{class_period}\index{Period@{Period}}
+
+
+Realisation of \mbox{\hyperlink{class_period}{Period}} class.  
+
+
+
+
+{\ttfamily \#include $<$Period.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_period_ad5c80a66be2d375542858c96ef55c6ae}{Period}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes start\+Date and end\+Date with same min values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_period_aa086da6a33926db8348e242f89652a75}{Period}} (\mbox{\hyperlink{class_date}{Date}} \&const sd, \mbox{\hyperlink{class_date}{Date}} \&const ed)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_period_afe008a754d8a3735a535fb4c1f97bcb8}{get\+Days}} () const
+\begin{DoxyCompactList}\small\item\em Gets days in this period. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_period}{Period}} \& \mbox{\hyperlink{class_period_abbafa55ce22b90206e5f6d3b57f8773b}{operator=}} (\mbox{\hyperlink{class_period}{Period}} const \&)
+\begin{DoxyCompactList}\small\item\em Assignes one \mbox{\hyperlink{class_period}{Period}} to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_period_a83beb76e0ba2ba17ef9dac36fdcea819}{get\+Start\+Date}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_period_af5469dd9baefa512f0beed6d54408ebe}{get\+End\+Date}} () const
+\item 
+bool \mbox{\hyperlink{class_period_afdb315f0de22cf7600a3ec4ce370527b}{is\+Date\+In\+Period}} (\mbox{\hyperlink{class_date}{Date}} \&const) const
+\begin{DoxyCompactList}\small\item\em Checks if a \mbox{\hyperlink{class_date}{Date}} is the current \mbox{\hyperlink{class_period}{Period}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_period_af8a7597d5831a81c4b609be1eadf3563}{start\+Date}}
+\begin{DoxyCompactList}\small\item\em The periods starts here. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_period_ae91907bd8b4b7ef88a32a71a8ec04f73}{end\+Date}}
+\begin{DoxyCompactList}\small\item\em The period ends here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realisation of \mbox{\hyperlink{class_period}{Period}} class. 
+
+Contains two dates -\/ start\+Date and end\+Date. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_period_ad5c80a66be2d375542858c96ef55c6ae}\label{class_period_ad5c80a66be2d375542858c96ef55c6ae}} 
+\index{Period@{Period}!Period@{Period}}
+\index{Period@{Period}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{Period()}{Period()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Period\+::\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializes start\+Date and end\+Date with same min values. 
+
+The period currently consists of 0 days. \mbox{\Hypertarget{class_period_aa086da6a33926db8348e242f89652a75}\label{class_period_aa086da6a33926db8348e242f89652a75}} 
+\index{Period@{Period}!Period@{Period}}
+\index{Period@{Period}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{Period()}{Period()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Period\+::\+Period (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{sd,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{ed }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_period_afe008a754d8a3735a535fb4c1f97bcb8}\label{class_period_afe008a754d8a3735a535fb4c1f97bcb8}} 
+\index{Period@{Period}!getDays@{getDays}}
+\index{getDays@{getDays}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{getDays()}{getDays()}}
+{\footnotesize\ttfamily unsigned Period\+::get\+Days (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets days in this period. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_date_ad490124972120bfa16eac7547884d350}{Date\+::operator-\/()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_period_af5469dd9baefa512f0beed6d54408ebe}\label{class_period_af5469dd9baefa512f0beed6d54408ebe}} 
+\index{Period@{Period}!getEndDate@{getEndDate}}
+\index{getEndDate@{getEndDate}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{getEndDate()}{getEndDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Period\+::get\+End\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_period_ae91907bd8b4b7ef88a32a71a8ec04f73}{Period\+::end\+Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_period_a83beb76e0ba2ba17ef9dac36fdcea819}\label{class_period_a83beb76e0ba2ba17ef9dac36fdcea819}} 
+\index{Period@{Period}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Period\+::get\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_period_af8a7597d5831a81c4b609be1eadf3563}{Period\+::start\+Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_period_afdb315f0de22cf7600a3ec4ce370527b}\label{class_period_afdb315f0de22cf7600a3ec4ce370527b}} 
+\index{Period@{Period}!isDateInPeriod@{isDateInPeriod}}
+\index{isDateInPeriod@{isDateInPeriod}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{isDateInPeriod()}{isDateInPeriod()}}
+{\footnotesize\ttfamily bool Period\+::is\+Date\+In\+Period (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \& const}]{d }\end{DoxyParamCaption}) const}
+
+
+
+Checks if a \mbox{\hyperlink{class_date}{Date}} is the current \mbox{\hyperlink{class_period}{Period}}. 
+
+\mbox{\Hypertarget{class_period_abbafa55ce22b90206e5f6d3b57f8773b}\label{class_period_abbafa55ce22b90206e5f6d3b57f8773b}} 
+\index{Period@{Period}!operator=@{operator=}}
+\index{operator=@{operator=}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_period}{Period}} \& Period\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_period}{Period}} const \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignes one \mbox{\hyperlink{class_period}{Period}} to another. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_period_ae91907bd8b4b7ef88a32a71a8ec04f73}\label{class_period_ae91907bd8b4b7ef88a32a71a8ec04f73}} 
+\index{Period@{Period}!endDate@{endDate}}
+\index{endDate@{endDate}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{endDate}{endDate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Period\+::end\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The period ends here. 
+
+\mbox{\Hypertarget{class_period_af8a7597d5831a81c4b609be1eadf3563}\label{class_period_af8a7597d5831a81c4b609be1eadf3563}} 
+\index{Period@{Period}!startDate@{startDate}}
+\index{startDate@{startDate}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{startDate}{startDate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Period\+::start\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The periods starts here. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_period_8hpp}{Period.\+hpp}}\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_period_8cpp}{Period.\+cpp}}\end{DoxyCompactItemize}

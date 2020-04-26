@@ -1,0 +1,228 @@
+\hypertarget{class_date}{}\doxysection{Date Class Reference}
+\label{class_date}\index{Date@{Date}}
+
+
+Realisation of \mbox{\hyperlink{class_date}{Date}} class.  
+
+
+
+
+{\ttfamily \#include $<$Date.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_date_a9ac86d2063bf02f7f258719cc3e80d7b}{Date}} (unsigned \mbox{\hyperlink{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}{year}}=\mbox{\hyperlink{_date_8hpp_ae8d47233df63403f5a05f9ec5ae235f1}{M\+I\+N\+\_\+\+Y\+E\+AR}}, unsigned \mbox{\hyperlink{class_date_aaa152f8b795cf43cbd17db72ad1263be}{month}}=\mbox{\hyperlink{_date_8hpp_a4f8d1336d02d1b300550520f54d7047e}{M\+I\+N\+\_\+\+M\+O\+N\+TH}}, unsigned \mbox{\hyperlink{class_date_a088706519330e455b4f68957d6801cde}{day}}=\mbox{\hyperlink{_date_8hpp_aa786cd6e1de0f12e85cbcc3f027661fb}{M\+I\+N\+\_\+\+D\+AY}})
+\begin{DoxyCompactList}\small\item\em Default constructor assignes the min values for all parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_a8cb7ca2995f22799c58f8f3347973af2}{Date}} (\mbox{\hyperlink{class_date}{Date}} const \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor copies all member variables from other object \mbox{\hyperlink{class_date}{Date}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \& \mbox{\hyperlink{class_date_a8e9c5627e5b76cb0639d07190c440e65}{operator=}} (\mbox{\hyperlink{class_date}{Date}} const \&)
+\begin{DoxyCompactList}\small\item\em Does the same as copy constructor but only if the objects \mbox{\hyperlink{class_date}{Date}} are different. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_a439f567a5853e858b29207f0146a5730}{operator==}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+bool \mbox{\hyperlink{class_date_a904fee35b56bdc1c33052196b8bb4abc}{operator$<$}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+bool \mbox{\hyperlink{class_date_a29fcd0485409b1b14eab7e4dd068e182}{operator$>$}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+bool \mbox{\hyperlink{class_date_a9bdadbe5a060f8d8e2398d6a407d5031}{operator$<$=}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+bool \mbox{\hyperlink{class_date_a28e91966e6ad5fd91150d0505d49dd55}{operator$>$=}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+unsigned \mbox{\hyperlink{class_date_ad490124972120bfa16eac7547884d350}{operator-\/}} (\mbox{\hyperlink{class_date}{Date}} const \&) const
+\item 
+void \mbox{\hyperlink{class_date_a7b87ee0af85086a82cde4741182693b7}{print\+Date}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em Prints date in I\+SO 8601 format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_aa5dcc3611edeb33baf71c4f8d2214489}{read\+Date}} (std\+::istream \&)
+\begin{DoxyCompactList}\small\item\em Reads date in I\+SO 8601 format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_date_a171fa5172f05a57ad8a5abb1b88167f5}{get\+Days\+Between}} (\mbox{\hyperlink{class_date}{Date}}, \mbox{\hyperlink{class_date}{Date}}) const
+\begin{DoxyCompactList}\small\item\em Gets days between two dates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_aa286a8020d7f514fe710b79042999e20}{swap}} (\mbox{\hyperlink{class_date}{Date}} \&, \mbox{\hyperlink{class_date}{Date}} \&) const
+\begin{DoxyCompactList}\small\item\em Swaps values of two \mbox{\hyperlink{class_date}{Date}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}{year}}
+\item 
+unsigned \mbox{\hyperlink{class_date_aaa152f8b795cf43cbd17db72ad1263be}{month}}
+\item 
+unsigned \mbox{\hyperlink{class_date_a088706519330e455b4f68957d6801cde}{day}}
+\item 
+unsigned \mbox{\hyperlink{class_date_af9fe976de7041bcb619b5be87727f24f}{day\+\_\+count}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_date_aed61a89add6cf1c8b24e67acd35b16ee}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_date}{Date}} const \&)
+\begin{DoxyCompactList}\small\item\em Prints date in I\+SO 8601 format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realisation of \mbox{\hyperlink{class_date}{Date}} class. 
+
+This class represents a date in I\+SO 8601 format. It consists of necessary methods such as \mbox{\hyperlink{class_date_a7b87ee0af85086a82cde4741182693b7}{print\+Date()}} \mbox{\hyperlink{class_date_aa5dcc3611edeb33baf71c4f8d2214489}{read\+Date()}} There are also implemented needful comparison operators. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_date_a9ac86d2063bf02f7f258719cc3e80d7b}\label{class_date_a9ac86d2063bf02f7f258719cc3e80d7b}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{unsigned}]{year = {\ttfamily \mbox{\hyperlink{_date_8hpp_ae8d47233df63403f5a05f9ec5ae235f1}{M\+I\+N\+\_\+\+Y\+E\+AR}}},  }\item[{unsigned}]{month = {\ttfamily \mbox{\hyperlink{_date_8hpp_a4f8d1336d02d1b300550520f54d7047e}{M\+I\+N\+\_\+\+M\+O\+N\+TH}}},  }\item[{unsigned}]{day = {\ttfamily \mbox{\hyperlink{_date_8hpp_aa786cd6e1de0f12e85cbcc3f027661fb}{M\+I\+N\+\_\+\+D\+AY}}} }\end{DoxyParamCaption})}
+
+
+
+Default constructor assignes the min values for all parameters. 
+
+\mbox{\Hypertarget{class_date_a8cb7ca2995f22799c58f8f3347973af2}\label{class_date_a8cb7ca2995f22799c58f8f3347973af2}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor copies all member variables from other object \mbox{\hyperlink{class_date}{Date}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_date_a171fa5172f05a57ad8a5abb1b88167f5}\label{class_date_a171fa5172f05a57ad8a5abb1b88167f5}} 
+\index{Date@{Date}!getDaysBetween@{getDaysBetween}}
+\index{getDaysBetween@{getDaysBetween}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{getDaysBetween()}{getDaysBetween()}}
+{\footnotesize\ttfamily unsigned Date\+::get\+Days\+Between (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}}}]{sooner,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{later }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets days between two dates. 
+
+The algorithm works quite symply. First gets how many days we need to even out the years, then the months and then the days. Tested with \href{https://www.timeanddate.com/date/duration.html}{\texttt{ https\+://www.\+timeanddate.\+com/date/duration.\+html}} \begin{DoxyReturn}{Returns}
+unsigned type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ad490124972120bfa16eac7547884d350}\label{class_date_ad490124972120bfa16eac7547884d350}} 
+\index{Date@{Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily unsigned Date\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_date_a171fa5172f05a57ad8a5abb1b88167f5}{Date\+::get\+Days\+Between(\+Date, Date) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_date_a904fee35b56bdc1c33052196b8bb4abc}\label{class_date_a904fee35b56bdc1c33052196b8bb4abc}} 
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Date\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a9bdadbe5a060f8d8e2398d6a407d5031}\label{class_date_a9bdadbe5a060f8d8e2398d6a407d5031}} 
+\index{Date@{Date}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Date\+::operator$<$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a8e9c5627e5b76cb0639d07190c440e65}\label{class_date_a8e9c5627e5b76cb0639d07190c440e65}} 
+\index{Date@{Date}!operator=@{operator=}}
+\index{operator=@{operator=}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} \& Date\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Does the same as copy constructor but only if the objects \mbox{\hyperlink{class_date}{Date}} are different. 
+
+\mbox{\Hypertarget{class_date_a439f567a5853e858b29207f0146a5730}\label{class_date_a439f567a5853e858b29207f0146a5730}} 
+\index{Date@{Date}!operator==@{operator==}}
+\index{operator==@{operator==}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Date\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a29fcd0485409b1b14eab7e4dd068e182}\label{class_date_a29fcd0485409b1b14eab7e4dd068e182}} 
+\index{Date@{Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Date\+::operator$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a28e91966e6ad5fd91150d0505d49dd55}\label{class_date_a28e91966e6ad5fd91150d0505d49dd55}} 
+\index{Date@{Date}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Date\+::operator$>$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a7b87ee0af85086a82cde4741182693b7}\label{class_date_a7b87ee0af85086a82cde4741182693b7}} 
+\index{Date@{Date}!printDate@{printDate}}
+\index{printDate@{printDate}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Date\+::print\+Date (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+Prints date in I\+SO 8601 format. 
+
+\mbox{\Hypertarget{class_date_aa5dcc3611edeb33baf71c4f8d2214489}\label{class_date_aa5dcc3611edeb33baf71c4f8d2214489}} 
+\index{Date@{Date}!readDate@{readDate}}
+\index{readDate@{readDate}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{readDate()}{readDate()}}
+{\footnotesize\ttfamily void Date\+::read\+Date (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Reads date in I\+SO 8601 format. 
+
+\mbox{\Hypertarget{class_date_aa286a8020d7f514fe710b79042999e20}\label{class_date_aa286a8020d7f514fe710b79042999e20}} 
+\index{Date@{Date}!swap@{swap}}
+\index{swap@{swap}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Date\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{d1,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{d2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Swaps values of two \mbox{\hyperlink{class_date}{Date}} objects. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_date_aed61a89add6cf1c8b24e67acd35b16ee}\label{class_date_aed61a89add6cf1c8b24e67acd35b16ee}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Prints date in I\+SO 8601 format. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_date_a088706519330e455b4f68957d6801cde}\label{class_date_a088706519330e455b4f68957d6801cde}} 
+\index{Date@{Date}!day@{day}}
+\index{day@{day}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily unsigned Date\+::day\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_date_af9fe976de7041bcb619b5be87727f24f}\label{class_date_af9fe976de7041bcb619b5be87727f24f}} 
+\index{Date@{Date}!day\_count@{day\_count}}
+\index{day\_count@{day\_count}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{day\_count}{day\_count}}
+{\footnotesize\ttfamily unsigned Date\+::day\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_date_aaa152f8b795cf43cbd17db72ad1263be}\label{class_date_aaa152f8b795cf43cbd17db72ad1263be}} 
+\index{Date@{Date}!month@{month}}
+\index{month@{month}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily unsigned Date\+::month\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}\label{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}} 
+\index{Date@{Date}!year@{year}}
+\index{year@{year}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily unsigned Date\+::year\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_date_8hpp}{Date.\+hpp}}\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_date_8cpp}{Date.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+\hypertarget{class_reservation}{}\doxysection{Reservation Class Reference}
+\label{class_reservation}\index{Reservation@{Reservation}}
+
+
+Realisation of \mbox{\hyperlink{class_reservation}{Reservation}} class.  
+
+
+
+
+{\ttfamily \#include $<$Reservation.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reservation_a63b283053695e6f50fa44c50da2b3de5}{Reservation}} ()
+\begin{DoxyCompactList}\small\item\em The period is created by default. Note note is assigned to nullptr and available is currently true. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_reservation_a2ca82a123b783738a3e954e1bf3b52b7}{Reservation}} (\mbox{\hyperlink{class_period}{Period}} \&const, char const $\ast$, bool \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{available}}=true)
+\begin{DoxyCompactList}\small\item\em Sets \mbox{\hyperlink{class_reservation_ada63be001d335dfdbe368635211ccf90}{Reservation\+::note}}, \mbox{\hyperlink{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}{Reservation\+::period}} and \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{Reservation\+::available}} (=true) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_reservation_abf387b06b84f8a12c8e2e95d431d3d60}{$\sim$\+Reservation}} ()
+\begin{DoxyCompactList}\small\item\em Destructor clears all dynamically allocated memory. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_reservation_a3710d41d0176605266321208fafafd94}{get\+Note}} () const
+\item 
+\mbox{\hyperlink{class_reservation}{Reservation}} \& \mbox{\hyperlink{class_reservation_a3c5e9d2c307a66db1823bb3157259172}{operator=}} (\mbox{\hyperlink{class_reservation}{Reservation}} const \&)
+\begin{DoxyCompactList}\small\item\em Assignes the value of another \mbox{\hyperlink{class_reservation}{Reservation}} to this. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_reservation_a4d39ba5ffb7abe25545c2838dfb9b804}{get\+Start\+Date}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_reservation_af42dc907d6c0327c37f2b8fa35e6fa27}{get\+End\+Date}} () const
+\item 
+bool \mbox{\hyperlink{class_reservation_ab5918a928b4d759f7c0e526ea7d66848}{is\+Available}} () const
+\item 
+bool \mbox{\hyperlink{class_reservation_aa0b4dbac9631d61bef0e603f92c25e9b}{overlap}} (\mbox{\hyperlink{class_reservation}{Reservation}} \&const other) const
+\item 
+bool \mbox{\hyperlink{class_reservation_ab7b51645683c3739b490e304884a92f2}{is\+Date\+In\+Reservation}} (\mbox{\hyperlink{class_date}{Date}} \&const) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reservation_aca234eca515b6d3053b5f6a64ec26bef}{set\+Note}} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em Sets the note to the \mbox{\hyperlink{class_reservation}{Reservation}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reservation_afadb899e72d1db2342e952f61d937339}{clear}} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em Clears dynamic allocated memory from the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_period}{Period}} \mbox{\hyperlink{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}{period}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_period}{Period}} of the reservation. How many days the guests will stay. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_reservation_ada63be001d335dfdbe368635211ccf90}{note}}
+\begin{DoxyCompactList}\small\item\em Note of the reservation. This can be as long as the user wants. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{available}}
+\begin{DoxyCompactList}\small\item\em Is this reservation available, e.\+g is any guest there or it is set unavailable for a \mbox{\hyperlink{class_period}{Period}} (e.\+g in construction or smth). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realisation of \mbox{\hyperlink{class_reservation}{Reservation}} class. 
+
+If someone wants to reserve a room they make reservation. Here are stored all the needful information aboit the \mbox{\hyperlink{class_reservation}{Reservation}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reservation_a63b283053695e6f50fa44c50da2b3de5}\label{class_reservation_a63b283053695e6f50fa44c50da2b3de5}} 
+\index{Reservation@{Reservation}!Reservation@{Reservation}}
+\index{Reservation@{Reservation}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{Reservation()}{Reservation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Reservation\+::\+Reservation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The period is created by default. Note note is assigned to nullptr and available is currently true. 
+
+\mbox{\Hypertarget{class_reservation_a2ca82a123b783738a3e954e1bf3b52b7}\label{class_reservation_a2ca82a123b783738a3e954e1bf3b52b7}} 
+\index{Reservation@{Reservation}!Reservation@{Reservation}}
+\index{Reservation@{Reservation}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{Reservation()}{Reservation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Reservation\+::\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_period}{Period}} \& const}]{p,  }\item[{char const $\ast$}]{nt,  }\item[{bool}]{available = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sets \mbox{\hyperlink{class_reservation_ada63be001d335dfdbe368635211ccf90}{Reservation\+::note}}, \mbox{\hyperlink{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}{Reservation\+::period}} and \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{Reservation\+::available}} (=true) 
+
+\mbox{\Hypertarget{class_reservation_abf387b06b84f8a12c8e2e95d431d3d60}\label{class_reservation_abf387b06b84f8a12c8e2e95d431d3d60}} 
+\index{Reservation@{Reservation}!````~Reservation@{$\sim$Reservation}}
+\index{````~Reservation@{$\sim$Reservation}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Reservation()}{~Reservation()}}
+{\footnotesize\ttfamily Reservation\+::$\sim$\+Reservation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor clears all dynamically allocated memory. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_reservation_afadb899e72d1db2342e952f61d937339}{clear(char$\ast$)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reservation_afadb899e72d1db2342e952f61d937339}\label{class_reservation_afadb899e72d1db2342e952f61d937339}} 
+\index{Reservation@{Reservation}!clear@{clear}}
+\index{clear@{clear}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Reservation\+::clear (\begin{DoxyParamCaption}\item[{char $\ast$}]{note }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Clears dynamic allocated memory from the heap. 
+
+\mbox{\Hypertarget{class_reservation_af42dc907d6c0327c37f2b8fa35e6fa27}\label{class_reservation_af42dc907d6c0327c37f2b8fa35e6fa27}} 
+\index{Reservation@{Reservation}!getEndDate@{getEndDate}}
+\index{getEndDate@{getEndDate}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{getEndDate()}{getEndDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Reservation\+::get\+End\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_period_af5469dd9baefa512f0beed6d54408ebe}{Period\+::get\+End\+Date()}} of \mbox{\hyperlink{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}{Reservation\+::period}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservation_a3710d41d0176605266321208fafafd94}\label{class_reservation_a3710d41d0176605266321208fafafd94}} 
+\index{Reservation@{Reservation}!getNote@{getNote}}
+\index{getNote@{getNote}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{getNote()}{getNote()}}
+{\footnotesize\ttfamily char $\ast$ Reservation\+::get\+Note (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a copy of the current note 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservation_a4d39ba5ffb7abe25545c2838dfb9b804}\label{class_reservation_a4d39ba5ffb7abe25545c2838dfb9b804}} 
+\index{Reservation@{Reservation}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Reservation\+::get\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_period_a83beb76e0ba2ba17ef9dac36fdcea819}{Period\+::get\+Start\+Date()}} of \mbox{\hyperlink{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}{Reservation\+::period}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservation_ab5918a928b4d759f7c0e526ea7d66848}\label{class_reservation_ab5918a928b4d759f7c0e526ea7d66848}} 
+\index{Reservation@{Reservation}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily bool Reservation\+::is\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+this-\/$>$available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservation_ab7b51645683c3739b490e304884a92f2}\label{class_reservation_ab7b51645683c3739b490e304884a92f2}} 
+\index{Reservation@{Reservation}!isDateInReservation@{isDateInReservation}}
+\index{isDateInReservation@{isDateInReservation}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{isDateInReservation()}{isDateInReservation()}}
+{\footnotesize\ttfamily bool Reservation\+::is\+Date\+In\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \& const}]{d }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+if a \mbox{\hyperlink{class_date}{Date}} (say, a current day) is in this reservation 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_period_afdb315f0de22cf7600a3ec4ce370527b}{Period\+::is\+Date\+In\+Period(\+Date\& const) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_reservation_a3c5e9d2c307a66db1823bb3157259172}\label{class_reservation_a3c5e9d2c307a66db1823bb3157259172}} 
+\index{Reservation@{Reservation}!operator=@{operator=}}
+\index{operator=@{operator=}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reservation}{Reservation}} \& Reservation\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reservation}{Reservation}} const \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignes the value of another \mbox{\hyperlink{class_reservation}{Reservation}} to this. 
+
+\mbox{\Hypertarget{class_reservation_aa0b4dbac9631d61bef0e603f92c25e9b}\label{class_reservation_aa0b4dbac9631d61bef0e603f92c25e9b}} 
+\index{Reservation@{Reservation}!overlap@{overlap}}
+\index{overlap@{overlap}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{overlap()}{overlap()}}
+{\footnotesize\ttfamily bool Reservation\+::overlap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reservation}{Reservation}} \&const}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+if the \mbox{\hyperlink{class_period}{Period}} of this \mbox{\hyperlink{class_reservation}{Reservation}} overlaps with another \mbox{\hyperlink{class_period}{Period}}, so we can tell if the \mbox{\hyperlink{class_period}{Period}} is free for this \mbox{\hyperlink{class_reservation}{Reservation}} or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservation_aca234eca515b6d3053b5f6a64ec26bef}\label{class_reservation_aca234eca515b6d3053b5f6a64ec26bef}} 
+\index{Reservation@{Reservation}!setNote@{setNote}}
+\index{setNote@{setNote}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{setNote()}{setNote()}}
+{\footnotesize\ttfamily void Reservation\+::set\+Note (\begin{DoxyParamCaption}\item[{const char $\ast$}]{other\+\_\+note }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the note to the \mbox{\hyperlink{class_reservation}{Reservation}}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_reservation_aaeedce6015460f5332e28f89f8c3504e}\label{class_reservation_aaeedce6015460f5332e28f89f8c3504e}} 
+\index{Reservation@{Reservation}!available@{available}}
+\index{available@{available}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{available}{available}}
+{\footnotesize\ttfamily bool Reservation\+::available\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is this reservation available, e.\+g is any guest there or it is set unavailable for a \mbox{\hyperlink{class_period}{Period}} (e.\+g in construction or smth). 
+
+\mbox{\Hypertarget{class_reservation_ada63be001d335dfdbe368635211ccf90}\label{class_reservation_ada63be001d335dfdbe368635211ccf90}} 
+\index{Reservation@{Reservation}!note@{note}}
+\index{note@{note}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{note}{note}}
+{\footnotesize\ttfamily char$\ast$ Reservation\+::note\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Note of the reservation. This can be as long as the user wants. 
+
+\mbox{\Hypertarget{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}\label{class_reservation_a7f3f71d0534a2f48862ccfb6c32f0246}} 
+\index{Reservation@{Reservation}!period@{period}}
+\index{period@{period}!Reservation@{Reservation}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_period}{Period}} Reservation\+::period\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_period}{Period}} of the reservation. How many days the guests will stay. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_reservation_8hpp}{Reservation.\+hpp}}\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_reservation_8cpp}{Reservation.\+cpp}}\end{DoxyCompactItemize}

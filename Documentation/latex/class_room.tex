@@ -1,0 +1,354 @@
+\hypertarget{class_room}{}\doxysection{Room Class Reference}
+\label{class_room}\index{Room@{Room}}
+
+
+Realisation of \mbox{\hyperlink{class_room}{Room}} class.  
+
+
+
+
+{\ttfamily \#include $<$Room.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_a67d5da09983cc53097807fd43ba5481a}{$\sim$\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Deletes dynamically alocated data from the heap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}{Room}} ()
+\begin{DoxyCompactList}\small\item\em Creates room with initial values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_a305548c4b51a29176258175b04340071}{Room}} (unsigned \mbox{\hyperlink{class_room_ae54c46167e054a10c2d2a9f9a66c419e}{number}}, size\+\_\+t \mbox{\hyperlink{class_room_adc422e4d24125fde1d0806993785a2cb}{reservations\+Count}}=0)
+\begin{DoxyCompactList}\small\item\em sets number, reservations count and allocates memory for the reservations \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_room_a2b023c7ab747fbc94a68c22990333fe8}{get\+Beds}} () const
+\item 
+unsigned \mbox{\hyperlink{class_room_ae5ed5ee7959c90200d1e6d780167fe89}{get\+Number}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_room_a3737e46135ae1afe5c21e19b62586750}{get\+Reservations\+Count}} () const
+\item 
+bool \mbox{\hyperlink{class_room_a931a03999006c255d899089436adef3a}{is\+Taken}} () const
+\item 
+void \mbox{\hyperlink{class_room_a635b51b6aee155cc86813d432246a103}{check\+Out}} ()
+\begin{DoxyCompactList}\small\item\em sets taken to false e.\+g frees reservation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a1a46248056932f363610c4450c6cb473}{check\+Date}} (\mbox{\hyperlink{class_date}{Date}} \&const) const
+\begin{DoxyCompactList}\small\item\em shows if the room is available on this date \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_af4891122599ad46a6c39a26036422861}{report\+Room}} (\mbox{\hyperlink{class_date}{Date}} \&const from, \mbox{\hyperlink{class_date}{Date}} \&const to, unsigned \&days\+\_\+count) const
+\item 
+void \mbox{\hyperlink{class_room_a35a0712674b146d52aec4db0a2e5a3dc}{make\+Reservation}} (\mbox{\hyperlink{class_date}{Date}} \&const sd, \mbox{\hyperlink{class_date}{Date}} \&const ed, char const $\ast$note, bool is\+Available)
+\begin{DoxyCompactList}\small\item\em Makes a reservation and adds it in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a5693afd462890a0165d9a40de5829969}{make\+Reservation}} (\mbox{\hyperlink{class_period}{Period}} p, char const $\ast$note)
+\begin{DoxyCompactList}\small\item\em same as room\+::make\+Reservation(\+Date\& const, Date\& const, char const$\ast$, bool) but automatically sets the \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{Reservation\+::available}} to true \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_ad8a9e72ebcb8833b6088363707221bff}{print\+Room}} (std\+::ostream \&stream) const
+\begin{DoxyCompactList}\small\item\em Prints \mbox{\hyperlink{class_room}{Room}} attributes to console or to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_room_ae05a1d3f61b5ff0e2d7cc2f96d7b9266}{set\+Beds}} ()
+\item 
+bool \mbox{\hyperlink{class_room_a6a9728c04a041176ef17e78ad54114e1}{free\+Check}} (\mbox{\hyperlink{class_reservation}{Reservation}} \&const)
+\begin{DoxyCompactList}\small\item\em Checks is reservation a guest wants to make is free (e.\+g if it does not overlap with another one) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_room_ae54c46167e054a10c2d2a9f9a66c419e}{number}}
+\begin{DoxyCompactList}\small\item\em Number of the \mbox{\hyperlink{class_room}{Room}}. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}}
+\begin{DoxyCompactList}\small\item\em How many beds does this \mbox{\hyperlink{class_room}{Room}} have. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_reservation}{Reservation}} $\ast$ \mbox{\hyperlink{class_room_a2041560b59fec63b9f9e20820f1d6b91}{reservations}}
+\begin{DoxyCompactList}\small\item\em List of the reservations. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_room_adc422e4d24125fde1d0806993785a2cb}{reservations\+Count}}
+\begin{DoxyCompactList}\small\item\em Keeps the current count of the reservations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a0cd1c49f709fdff72f9460685fdf0454}{taken}}
+\begin{DoxyCompactList}\small\item\em To keep track if the requested room is currently taken by a guest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realisation of \mbox{\hyperlink{class_room}{Room}} class. 
+
+Guests in the hotel can book several types of rooms differing in how many rooms they have. \begin{DoxyNote}{Note}
+{\itshape T\+O\+DO\+:} Maybe needs a member variable number of guests, which will defaulty initialize as 0, and takes the number of guests as value when a reservation is made. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_room_ae05a1d3f61b5ff0e2d7cc2f96d7b9266}{Room\+::set\+Beds()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room_a67d5da09983cc53097807fd43ba5481a}\label{class_room_a67d5da09983cc53097807fd43ba5481a}} 
+\index{Room@{Room}!````~Room@{$\sim$Room}}
+\index{````~Room@{$\sim$Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{$\sim$Room()}{~Room()}}
+{\footnotesize\ttfamily Room\+::$\sim$\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes dynamically alocated data from the heap. 
+
+\mbox{\Hypertarget{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}\label{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates room with initial values. 
+
+\mbox{\hyperlink{class_room_ae54c46167e054a10c2d2a9f9a66c419e}{Room\+::number}} gets assigned according to Room\+::room\+\_\+count which is a static member and increases itself when we call a constructor (but not a copy constructor). \begin{DoxyNote}{Note}
+Speaking of copy, we need copy constuctor and operator=, will be done along with sorting the reservations. Is it needed now? 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_room_a305548c4b51a29176258175b04340071}\label{class_room_a305548c4b51a29176258175b04340071}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{unsigned}]{number,  }\item[{size\+\_\+t}]{reservations\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+sets number, reservations count and allocates memory for the reservations 
+
+\begin{DoxyNote}{Note}
+if \mbox{\hyperlink{class_room_adc422e4d24125fde1d0806993785a2cb}{Room\+::reservations\+Count}} is 0, the list is nullptr. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_a1a46248056932f363610c4450c6cb473}\label{class_room_a1a46248056932f363610c4450c6cb473}} 
+\index{Room@{Room}!checkDate@{checkDate}}
+\index{checkDate@{checkDate}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{checkDate()}{checkDate()}}
+{\footnotesize\ttfamily bool Room\+::check\+Date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \& const}]{d }\end{DoxyParamCaption}) const}
+
+
+
+shows if the room is available on this date 
+
+\mbox{\Hypertarget{class_room_a635b51b6aee155cc86813d432246a103}\label{class_room_a635b51b6aee155cc86813d432246a103}} 
+\index{Room@{Room}!checkOut@{checkOut}}
+\index{checkOut@{checkOut}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{checkOut()}{checkOut()}}
+{\footnotesize\ttfamily void Room\+::check\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets taken to false e.\+g frees reservation 
+
+\mbox{\Hypertarget{class_room_a6a9728c04a041176ef17e78ad54114e1}\label{class_room_a6a9728c04a041176ef17e78ad54114e1}} 
+\index{Room@{Room}!freeCheck@{freeCheck}}
+\index{freeCheck@{freeCheck}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{freeCheck()}{freeCheck()}}
+{\footnotesize\ttfamily bool Room\+::free\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reservation}{Reservation}} \& const}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks is reservation a guest wants to make is free (e.\+g if it does not overlap with another one) 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_reservation_aa0b4dbac9631d61bef0e603f92c25e9b}{Reservation\+::overlap()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_room_a2b023c7ab747fbc94a68c22990333fe8}\label{class_room_a2b023c7ab747fbc94a68c22990333fe8}} 
+\index{Room@{Room}!getBeds@{getBeds}}
+\index{getBeds@{getBeds}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getBeds()}{getBeds()}}
+{\footnotesize\ttfamily unsigned Room\+::get\+Beds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{Room\+::beds}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_ae5ed5ee7959c90200d1e6d780167fe89}\label{class_room_ae5ed5ee7959c90200d1e6d780167fe89}} 
+\index{Room@{Room}!getNumber@{getNumber}}
+\index{getNumber@{getNumber}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getNumber()}{getNumber()}}
+{\footnotesize\ttfamily unsigned Room\+::get\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_room_ae54c46167e054a10c2d2a9f9a66c419e}{Room\+::number}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_a3737e46135ae1afe5c21e19b62586750}\label{class_room_a3737e46135ae1afe5c21e19b62586750}} 
+\index{Room@{Room}!getReservationsCount@{getReservationsCount}}
+\index{getReservationsCount@{getReservationsCount}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getReservationsCount()}{getReservationsCount()}}
+{\footnotesize\ttfamily size\+\_\+t Room\+::get\+Reservations\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_room_adc422e4d24125fde1d0806993785a2cb}{Room\+::reservations\+Count}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_a931a03999006c255d899089436adef3a}\label{class_room_a931a03999006c255d899089436adef3a}} 
+\index{Room@{Room}!isTaken@{isTaken}}
+\index{isTaken@{isTaken}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{isTaken()}{isTaken()}}
+{\footnotesize\ttfamily bool Room\+::is\+Taken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_room_a0cd1c49f709fdff72f9460685fdf0454}{Room\+::taken}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_a35a0712674b146d52aec4db0a2e5a3dc}\label{class_room_a35a0712674b146d52aec4db0a2e5a3dc}} 
+\index{Room@{Room}!makeReservation@{makeReservation}}
+\index{makeReservation@{makeReservation}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{makeReservation()}{makeReservation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Room\+::make\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{sd,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{ed,  }\item[{char const $\ast$}]{note,  }\item[{bool}]{is\+Available }\end{DoxyParamCaption})}
+
+
+
+Makes a reservation and adds it in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Available} & sets the room available or unavailable for this reservation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If we want to make a room unavailable, instead of writing new method for it, just make a \mbox{\hyperlink{class_reservation}{Reservation}} for a \mbox{\hyperlink{class_period}{Period}} and check the \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{Reservation\+::available}} to false. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_room_a5693afd462890a0165d9a40de5829969}\label{class_room_a5693afd462890a0165d9a40de5829969}} 
+\index{Room@{Room}!makeReservation@{makeReservation}}
+\index{makeReservation@{makeReservation}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{makeReservation()}{makeReservation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Room\+::make\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_period}{Period}}}]{p,  }\item[{char const $\ast$}]{note }\end{DoxyParamCaption})}
+
+
+
+same as room\+::make\+Reservation(\+Date\& const, Date\& const, char const$\ast$, bool) but automatically sets the \mbox{\hyperlink{class_reservation_aaeedce6015460f5332e28f89f8c3504e}{Reservation\+::available}} to true 
+
+\mbox{\Hypertarget{class_room_ad8a9e72ebcb8833b6088363707221bff}\label{class_room_ad8a9e72ebcb8833b6088363707221bff}} 
+\index{Room@{Room}!printRoom@{printRoom}}
+\index{printRoom@{printRoom}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{printRoom()}{printRoom()}}
+{\footnotesize\ttfamily void Room\+::print\+Room (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption}) const}
+
+
+
+Prints \mbox{\hyperlink{class_room}{Room}} attributes to console or to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & shows what stream we want to use. To print on a file, or on console. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_af4891122599ad46a6c39a26036422861}\label{class_room_af4891122599ad46a6c39a26036422861}} 
+\index{Room@{Room}!reportRoom@{reportRoom}}
+\index{reportRoom@{reportRoom}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{reportRoom()}{reportRoom()}}
+{\footnotesize\ttfamily bool Room\+::report\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{from,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&const}]{to,  }\item[{unsigned \&}]{days\+\_\+count }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Basically returns if the room is used in a certain diapason 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Indicates start date \\
+\hline
+{\em to} & Indicates end date \\
+\hline
+{\em date\+\_\+count} & is also passed by reference as te function returns bool value but I also want to extract how many days the room is used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_ae05a1d3f61b5ff0e2d7cc2f96d7b9266}\label{class_room_ae05a1d3f61b5ff0e2d7cc2f96d7b9266}} 
+\index{Room@{Room}!setBeds@{setBeds}}
+\index{setBeds@{setBeds}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setBeds()}{setBeds()}}
+{\footnotesize\ttfamily void Room\+::set\+Beds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyNote}{Note}
+automatically sets a number of beds according
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} lastDigit = \mbox{\hyperlink{class_room_ae54c46167e054a10c2d2a9f9a66c419e}{number}} \% 10;}
+\DoxyCodeLine{    \textcolor{keywordflow}{switch} (lastDigit) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 6; \textcolor{comment}{// VIP appartement}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 5; \textcolor{comment}{// appartement}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 4; \textcolor{comment}{// family}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 3; \textcolor{comment}{// small family}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 2; \textcolor{comment}{// couple}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{        \mbox{\hyperlink{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}{beds}} = 1; \textcolor{comment}{// single}}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{        std::cout << \textcolor{stringliteral}{"Invalid room number! What is happening?"} << std::endl;}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}\label{class_room_a3d2cae63f7a9bcce6dcdee8de532e119}} 
+\index{Room@{Room}!beds@{beds}}
+\index{beds@{beds}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{beds}{beds}}
+{\footnotesize\ttfamily unsigned Room\+::beds\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+How many beds does this \mbox{\hyperlink{class_room}{Room}} have. 
+
+\mbox{\Hypertarget{class_room_ae54c46167e054a10c2d2a9f9a66c419e}\label{class_room_ae54c46167e054a10c2d2a9f9a66c419e}} 
+\index{Room@{Room}!number@{number}}
+\index{number@{number}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily unsigned Room\+::number\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of the \mbox{\hyperlink{class_room}{Room}}. 
+
+\mbox{\Hypertarget{class_room_a2041560b59fec63b9f9e20820f1d6b91}\label{class_room_a2041560b59fec63b9f9e20820f1d6b91}} 
+\index{Room@{Room}!reservations@{reservations}}
+\index{reservations@{reservations}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{reservations}{reservations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reservation}{Reservation}}$\ast$ Room\+::reservations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of the reservations. 
+
+\begin{DoxyNote}{Note}
+{\itshape I\+D\+EA\+:} Maybe create a queue for the reservations and when someone makes \mbox{\hyperlink{class_reservation}{Reservation}} put it there. The queue must stay always sorted so with the command checkout the first(sooner) \mbox{\hyperlink{class_reservation}{Reservation}} in the queue pops. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_room_adc422e4d24125fde1d0806993785a2cb}\label{class_room_adc422e4d24125fde1d0806993785a2cb}} 
+\index{Room@{Room}!reservationsCount@{reservationsCount}}
+\index{reservationsCount@{reservationsCount}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{reservationsCount}{reservationsCount}}
+{\footnotesize\ttfamily size\+\_\+t Room\+::reservations\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Keeps the current count of the reservations. 
+
+\begin{DoxyNote}{Note}
+{\itshape T\+O\+DO\+:} create variable size\+\_\+t reservations\+Capacity and resize the list of reservations dynamically (Or maybe it will be a linked queue?) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_room_a0cd1c49f709fdff72f9460685fdf0454}\label{class_room_a0cd1c49f709fdff72f9460685fdf0454}} 
+\index{Room@{Room}!taken@{taken}}
+\index{taken@{taken}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{taken}{taken}}
+{\footnotesize\ttfamily bool Room\+::taken\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+To keep track if the requested room is currently taken by a guest. 
+
+\begin{DoxyNote}{Note}
+{\itshape I\+D\+EA\+:} Somehow get the current \mbox{\hyperlink{class_date}{Date}} in real time and say if the date is contained in the first \mbox{\hyperlink{class_reservation}{Reservation}} in the queue? 
+
+{\itshape I\+D\+EA\+:} at start pop all reservations from the queue which Reservation\+::end\+Date $<$ the current (real time) date. This way we will see which room is currently taken. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_room_8hpp}{Room.\+hpp}}\item 
+C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

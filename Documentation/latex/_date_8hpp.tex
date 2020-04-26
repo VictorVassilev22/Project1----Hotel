@@ -1,0 +1,149 @@
+\hypertarget{_date_8hpp}{}\doxysection{C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/\+Date.hpp File Reference}
+\label{_date_8hpp}\index{C:/Users/VivoBook\_X512DA/source/repos/Project1-\/-\/-\/-\/Hotel/Hotel/Hotel/Date.hpp@{C:/Users/VivoBook\_X512DA/source/repos/Project1-\/-\/-\/-\/Hotel/Hotel/Hotel/Date.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_date}{Date}}
+\begin{DoxyCompactList}\small\item\em Realisation of \mbox{\hyperlink{class_date}{Date}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_date_8hpp_aed61a89add6cf1c8b24e67acd35b16ee}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_date}{Date}} const \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_ae8d47233df63403f5a05f9ec5ae235f1}{M\+I\+N\+\_\+\+Y\+E\+AR}} = 2020
+\begin{DoxyCompactList}\small\item\em The hotel can book rooms from M\+I\+N\+\_\+\+Y\+E\+AR. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_a4380d94deba44dbe040f39986224a900}{M\+A\+X\+\_\+\+Y\+E\+AR}} = 2100
+\begin{DoxyCompactList}\small\item\em To M\+A\+X\+\_\+\+Y\+E\+AR. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_a10de637a3ad3924856fa71b792ad54cc}{M\+A\+X\+\_\+\+D\+A\+Y\+S\+\_\+\+Y\+E\+AR}} = 365
+\begin{DoxyCompactList}\small\item\em Indicates how many days a default year has (365, 366 for a leap year). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_abf0c56119dc380d6bc576fb6e4a8590d}{M\+A\+X\+\_\+\+M\+O\+N\+TH}} = 12
+\begin{DoxyCompactList}\small\item\em Number of months per year (12). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_a4f8d1336d02d1b300550520f54d7047e}{M\+I\+N\+\_\+\+M\+O\+N\+TH}} = 1
+\begin{DoxyCompactList}\small\item\em Minimal value for month (1). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_aa786cd6e1de0f12e85cbcc3f027661fb}{M\+I\+N\+\_\+\+D\+AY}} = 1
+\begin{DoxyCompactList}\small\item\em Minimal value for day (1). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_aa56eddec0433bde6913d8338531c2763}{Y\+E\+A\+R\+\_\+\+S\+Y\+M\+B\+O\+LS}} = 5
+\begin{DoxyCompactList}\small\item\em How many sybols does a year representation contain (4 + 1 for the terminating zero). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_a1fc7922eea27d510f1e4152301be8299}{M\+O\+N\+T\+H\+\_\+\+S\+Y\+M\+B\+O\+LS}} = 3
+\begin{DoxyCompactList}\small\item\em How many sybols does a month representation contain(3 + 1 for the terminating zero). \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{_date_8hpp_ae48f1dfaf7d5979f92ff94dee756ad24}{D\+A\+Y\+\_\+\+S\+Y\+M\+B\+O\+LS}} = 3
+\begin{DoxyCompactList}\small\item\em How many sybols does a day representation contain(3 + 1 for the terminating zero). \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{_date_8hpp_a3f3decfa2c460813cd0a98f5a0fb882d}{D\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}} = 11
+\begin{DoxyCompactList}\small\item\em The whole date object representations consists of 11 symbols by the I\+SO 8601 format (10 + 1 for the terminating zero). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_date_8hpp_aed61a89add6cf1c8b24e67acd35b16ee}\label{_date_8hpp_aed61a89add6cf1c8b24e67acd35b16ee}} 
+\index{Date.hpp@{Date.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{\mbox{\hyperlink{class_date}{Date}} const \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_date_8hpp_a3f3decfa2c460813cd0a98f5a0fb882d}\label{_date_8hpp_a3f3decfa2c460813cd0a98f5a0fb882d}} 
+\index{Date.hpp@{Date.hpp}!DATE\_STR\_LENGTH@{DATE\_STR\_LENGTH}}
+\index{DATE\_STR\_LENGTH@{DATE\_STR\_LENGTH}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{DATE\_STR\_LENGTH}{DATE\_STR\_LENGTH}}
+{\footnotesize\ttfamily const size\+\_\+t D\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+L\+E\+N\+G\+TH = 11}
+
+
+
+The whole date object representations consists of 11 symbols by the I\+SO 8601 format (10 + 1 for the terminating zero). 
+
+\mbox{\Hypertarget{_date_8hpp_ae48f1dfaf7d5979f92ff94dee756ad24}\label{_date_8hpp_ae48f1dfaf7d5979f92ff94dee756ad24}} 
+\index{Date.hpp@{Date.hpp}!DAY\_SYMBOLS@{DAY\_SYMBOLS}}
+\index{DAY\_SYMBOLS@{DAY\_SYMBOLS}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{DAY\_SYMBOLS}{DAY\_SYMBOLS}}
+{\footnotesize\ttfamily const unsigned D\+A\+Y\+\_\+\+S\+Y\+M\+B\+O\+LS = 3}
+
+
+
+How many sybols does a day representation contain(3 + 1 for the terminating zero). 
+
+\mbox{\Hypertarget{_date_8hpp_a10de637a3ad3924856fa71b792ad54cc}\label{_date_8hpp_a10de637a3ad3924856fa71b792ad54cc}} 
+\index{Date.hpp@{Date.hpp}!MAX\_DAYS\_YEAR@{MAX\_DAYS\_YEAR}}
+\index{MAX\_DAYS\_YEAR@{MAX\_DAYS\_YEAR}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_DAYS\_YEAR}{MAX\_DAYS\_YEAR}}
+{\footnotesize\ttfamily const unsigned M\+A\+X\+\_\+\+D\+A\+Y\+S\+\_\+\+Y\+E\+AR = 365}
+
+
+
+Indicates how many days a default year has (365, 366 for a leap year). 
+
+\mbox{\Hypertarget{_date_8hpp_abf0c56119dc380d6bc576fb6e4a8590d}\label{_date_8hpp_abf0c56119dc380d6bc576fb6e4a8590d}} 
+\index{Date.hpp@{Date.hpp}!MAX\_MONTH@{MAX\_MONTH}}
+\index{MAX\_MONTH@{MAX\_MONTH}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_MONTH}{MAX\_MONTH}}
+{\footnotesize\ttfamily const unsigned M\+A\+X\+\_\+\+M\+O\+N\+TH = 12}
+
+
+
+Number of months per year (12). 
+
+\mbox{\Hypertarget{_date_8hpp_a4380d94deba44dbe040f39986224a900}\label{_date_8hpp_a4380d94deba44dbe040f39986224a900}} 
+\index{Date.hpp@{Date.hpp}!MAX\_YEAR@{MAX\_YEAR}}
+\index{MAX\_YEAR@{MAX\_YEAR}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_YEAR}{MAX\_YEAR}}
+{\footnotesize\ttfamily const unsigned M\+A\+X\+\_\+\+Y\+E\+AR = 2100}
+
+
+
+To M\+A\+X\+\_\+\+Y\+E\+AR. 
+
+\mbox{\Hypertarget{_date_8hpp_aa786cd6e1de0f12e85cbcc3f027661fb}\label{_date_8hpp_aa786cd6e1de0f12e85cbcc3f027661fb}} 
+\index{Date.hpp@{Date.hpp}!MIN\_DAY@{MIN\_DAY}}
+\index{MIN\_DAY@{MIN\_DAY}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MIN\_DAY}{MIN\_DAY}}
+{\footnotesize\ttfamily const unsigned M\+I\+N\+\_\+\+D\+AY = 1}
+
+
+
+Minimal value for day (1). 
+
+\mbox{\Hypertarget{_date_8hpp_a4f8d1336d02d1b300550520f54d7047e}\label{_date_8hpp_a4f8d1336d02d1b300550520f54d7047e}} 
+\index{Date.hpp@{Date.hpp}!MIN\_MONTH@{MIN\_MONTH}}
+\index{MIN\_MONTH@{MIN\_MONTH}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MIN\_MONTH}{MIN\_MONTH}}
+{\footnotesize\ttfamily const unsigned M\+I\+N\+\_\+\+M\+O\+N\+TH = 1}
+
+
+
+Minimal value for month (1). 
+
+\mbox{\Hypertarget{_date_8hpp_ae8d47233df63403f5a05f9ec5ae235f1}\label{_date_8hpp_ae8d47233df63403f5a05f9ec5ae235f1}} 
+\index{Date.hpp@{Date.hpp}!MIN\_YEAR@{MIN\_YEAR}}
+\index{MIN\_YEAR@{MIN\_YEAR}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MIN\_YEAR}{MIN\_YEAR}}
+{\footnotesize\ttfamily const unsigned M\+I\+N\+\_\+\+Y\+E\+AR = 2020}
+
+
+
+The hotel can book rooms from M\+I\+N\+\_\+\+Y\+E\+AR. 
+
+\mbox{\Hypertarget{_date_8hpp_a1fc7922eea27d510f1e4152301be8299}\label{_date_8hpp_a1fc7922eea27d510f1e4152301be8299}} 
+\index{Date.hpp@{Date.hpp}!MONTH\_SYMBOLS@{MONTH\_SYMBOLS}}
+\index{MONTH\_SYMBOLS@{MONTH\_SYMBOLS}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{MONTH\_SYMBOLS}{MONTH\_SYMBOLS}}
+{\footnotesize\ttfamily const unsigned M\+O\+N\+T\+H\+\_\+\+S\+Y\+M\+B\+O\+LS = 3}
+
+
+
+How many sybols does a month representation contain(3 + 1 for the terminating zero). 
+
+\mbox{\Hypertarget{_date_8hpp_aa56eddec0433bde6913d8338531c2763}\label{_date_8hpp_aa56eddec0433bde6913d8338531c2763}} 
+\index{Date.hpp@{Date.hpp}!YEAR\_SYMBOLS@{YEAR\_SYMBOLS}}
+\index{YEAR\_SYMBOLS@{YEAR\_SYMBOLS}!Date.hpp@{Date.hpp}}
+\doxysubsubsection{\texorpdfstring{YEAR\_SYMBOLS}{YEAR\_SYMBOLS}}
+{\footnotesize\ttfamily const unsigned Y\+E\+A\+R\+\_\+\+S\+Y\+M\+B\+O\+LS = 5}
+
+
+
+How many sybols does a year representation contain (4 + 1 for the terminating zero). 
+

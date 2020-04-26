@@ -1,0 +1,311 @@
+\hypertarget{main_8cpp}{}\doxysection{C\+:/\+Users/\+Vivo\+Book\+\_\+\+X512\+D\+A/source/repos/\+Project1-\/-\/-\/-\/\+Hotel/\+Hotel/\+Hotel/main.cpp File Reference}
+\label{main_8cpp}\index{C:/Users/VivoBook\_X512DA/source/repos/Project1-\/-\/-\/-\/Hotel/Hotel/Hotel/main.cpp@{C:/Users/VivoBook\_X512DA/source/repos/Project1-\/-\/-\/-\/Hotel/Hotel/Hotel/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Room.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{main_8cpp_a63ad18fe1516a5416764874330fcda7c}{swap}} (T \&t1, T \&t2)
+\begin{DoxyCompactList}\small\item\em template function that swaps the values of two variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a54240ded328b857cf09a6964e49b556d}{report}} (\mbox{\hyperlink{class_room}{Room}} Hotel\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Executing command to print a report. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a7b2ba283c02081797e4282a9e025a0c7}{available}} (\mbox{\hyperlink{class_room}{Room}} Hotel\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Executes command to show availability of rooms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a2131260e2726521629495569cb568b51}{clear\+Str}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Clears memory of char$\ast$ from the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ab149e92becf583ac940f84c4b713010c}{resize\+Str}} (char $\ast$\&str, size\+\_\+t \&size, size\+\_\+t \&to)
+\begin{DoxyCompactList}\small\item\em Resizes char$\ast$. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a9b1c3fc755e890996d8535f3479bc485}{get\+Note}} (char $\ast$\&str, size\+\_\+t \&size, std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Gets a note much long as we want. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a737a8ed301d74d4f818da2ddbb75552f}{checkin}} (\mbox{\hyperlink{class_room}{Room}} Hotel\mbox{[}\mbox{\hyperlink{main_8cpp_a4103f0a53003007385da6655929f4a9f}{M\+A\+X\+\_\+\+R\+O\+O\+MS}}\mbox{]}, bool set\+Available)
+\begin{DoxyCompactList}\small\item\em Basically makes a reservation for a room, given a number, \mbox{\hyperlink{class_period}{Period}} by start date and end date, and a note. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}{command\+Controller}} (char command\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]}, \mbox{\hyperlink{class_room}{Room}} Hotel\mbox{[}\mbox{\hyperlink{main_8cpp_a4103f0a53003007385da6655929f4a9f}{M\+A\+X\+\_\+\+R\+O\+O\+MS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em The command controller executes a single command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_abfc29cd8c83d49b362ab199febed3509}{open\+Command\+Line}} (\mbox{\hyperlink{class_room}{Room}} Hotel\mbox{[}\mbox{\hyperlink{main_8cpp_a4103f0a53003007385da6655929f4a9f}{M\+A\+X\+\_\+\+R\+O\+O\+MS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Opens the \mbox{\hyperlink{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}{command\+Controller()}} Takes commands intil the command is S\+T\+O\+P\+\_\+\+C\+MD, then command\+Controller returns false and the cycle here stops. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Initializes array \char`\"{}\+Hotel\char`\"{} consisting of M\+A\+X\+\_\+\+R\+O\+O\+MS rooms and executes \mbox{\hyperlink{main_8cpp_abfc29cd8c83d49b362ab199febed3509}{open\+Command\+Line()}} with \char`\"{}\+Hotel\char`\"{} as a parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{main_8cpp_a4103f0a53003007385da6655929f4a9f}{M\+A\+X\+\_\+\+R\+O\+O\+MS}} = 50
+\begin{DoxyCompactList}\small\item\em How many rooms the hotel has. Can be changed any time. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}} = 13
+\begin{DoxyCompactList}\small\item\em Max value of symbols a user command should have. According to the paper, the longest command has 13 symbols (including the teminating zero). \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{main_8cpp_af19431eb3850446de644b7ab1a4ca82e}{N\+O\+T\+E\+\_\+\+D\+E\+F\+\_\+\+S\+I\+ZE}} = 13
+\begin{DoxyCompactList}\small\item\em How many symbols the note has. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{main_8cpp_a3278a98040c388a69624a69e31ced264}{M\+A\+X\+\_\+\+C\+H\+A\+R\+L\+I\+NE}} = 100
+\begin{DoxyCompactList}\small\item\em Max line of characters when entering command. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a5b3b39c5721a585488de5647f9c8f640}{S\+T\+O\+P\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}close\char`\"{}
+\begin{DoxyCompactList}\small\item\em This command closes the command line. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a4f3b56f8b8d5b6ca894d4acbd2bdcf6e}{C\+H\+E\+C\+K\+I\+N\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}checkin\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for checkin. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_aa89d41d0569f5f8e0e63ea94cdbb2b0f}{A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}availability\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for showing availability. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a449dc0d4e192da48e89332f1dcc38273}{R\+E\+P\+O\+R\+T\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}report\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for showing report. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a637a1f603c44e4ba3b420e5febd33eb4}{U\+N\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}unavailable\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for setting room unavailable. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a6b489b1c2f081de93fb40c812b9d9e37}{C\+H\+E\+C\+K\+O\+U\+T\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}checkout\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for checkout. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_a22a31e14c4e17aa5b9e64ce9dbc3d1c7}{F\+I\+N\+D\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}find\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for finding rooms. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{main_8cpp_af0b99c2645ce3ee193f16d40948ea574}{F\+I\+N\+D\+\_\+\+U\+R\+G\+E\+N\+T\+\_\+\+C\+MD}} \mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}find!\char`\"{}
+\begin{DoxyCompactList}\small\item\em Command for finding rooms for someone important fast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a7b2ba283c02081797e4282a9e025a0c7}\label{main_8cpp_a7b2ba283c02081797e4282a9e025a0c7}} 
+\index{main.cpp@{main.cpp}!available@{available}}
+\index{available@{available}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily void available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{Hotel\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Executes command to show availability of rooms. 
+
+Reads a date with \mbox{\hyperlink{class_date_aa5dcc3611edeb33baf71c4f8d2214489}{Date\+::read\+Date()}} Prints all the rooms that are free on this date. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_room_a1a46248056932f363610c4450c6cb473}{Room\+::check\+Date()}} \mbox{\hyperlink{class_room_ad8a9e72ebcb8833b6088363707221bff}{Room\+::print\+Room()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_a737a8ed301d74d4f818da2ddbb75552f}\label{main_8cpp_a737a8ed301d74d4f818da2ddbb75552f}} 
+\index{main.cpp@{main.cpp}!checkin@{checkin}}
+\index{checkin@{checkin}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}}
+{\footnotesize\ttfamily void checkin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{Hotel\mbox{[}\+M\+A\+X\+\_\+\+R\+O\+O\+M\+S\mbox{]},  }\item[{bool}]{set\+Available }\end{DoxyParamCaption})}
+
+
+
+Basically makes a reservation for a room, given a number, \mbox{\hyperlink{class_period}{Period}} by start date and end date, and a note. 
+
+\begin{DoxyNote}{Note}
+{\itshape T\+O\+DO\+:} Make not obligatory option to select number of guests 
+\end{DoxyNote}
+cleaning the buffer \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{main_8cpp_a3278a98040c388a69624a69e31ced264}{M\+A\+X\+\_\+\+C\+H\+A\+R\+L\+I\+NE}}
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_a2131260e2726521629495569cb568b51}\label{main_8cpp_a2131260e2726521629495569cb568b51}} 
+\index{main.cpp@{main.cpp}!clearStr@{clearStr}}
+\index{clearStr@{clearStr}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{clearStr()}{clearStr()}}
+{\footnotesize\ttfamily void clear\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Clears memory of char$\ast$ from the heap. 
+
+\mbox{\Hypertarget{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}\label{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}} 
+\index{main.cpp@{main.cpp}!commandController@{commandController}}
+\index{commandController@{commandController}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{commandController()}{commandController()}}
+{\footnotesize\ttfamily bool command\+Controller (\begin{DoxyParamCaption}\item[{char}]{command\mbox{[}\+M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\mbox{]},  }\item[{\mbox{\hyperlink{class_room}{Room}}}]{Hotel\mbox{[}\+M\+A\+X\+\_\+\+R\+O\+O\+M\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The command controller executes a single command. 
+
+\mbox{\Hypertarget{main_8cpp_a9b1c3fc755e890996d8535f3479bc485}\label{main_8cpp_a9b1c3fc755e890996d8535f3479bc485}} 
+\index{main.cpp@{main.cpp}!getNote@{getNote}}
+\index{getNote@{getNote}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{getNote()}{getNote()}}
+{\footnotesize\ttfamily void get\+Note (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{str,  }\item[{size\+\_\+t \&}]{size,  }\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Gets a note much long as we want. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{main_8cpp_ab149e92becf583ac940f84c4b713010c}{resize\+Str()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes array \char`\"{}\+Hotel\char`\"{} consisting of M\+A\+X\+\_\+\+R\+O\+O\+MS rooms and executes \mbox{\hyperlink{main_8cpp_abfc29cd8c83d49b362ab199febed3509}{open\+Command\+Line()}} with \char`\"{}\+Hotel\char`\"{} as a parameter. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{main_8cpp_abfc29cd8c83d49b362ab199febed3509}{open\+Command\+Line()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_abfc29cd8c83d49b362ab199febed3509}\label{main_8cpp_abfc29cd8c83d49b362ab199febed3509}} 
+\index{main.cpp@{main.cpp}!openCommandLine@{openCommandLine}}
+\index{openCommandLine@{openCommandLine}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{openCommandLine()}{openCommandLine()}}
+{\footnotesize\ttfamily void open\+Command\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{Hotel\mbox{[}\+M\+A\+X\+\_\+\+R\+O\+O\+M\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Opens the \mbox{\hyperlink{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}{command\+Controller()}} Takes commands intil the command is S\+T\+O\+P\+\_\+\+C\+MD, then command\+Controller returns false and the cycle here stops. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{main_8cpp_a03d272609216e7d3f6d211f3171eb4de}{command\+Controller(char command\mbox{[}\+M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\mbox{]}, Room Hotel\mbox{[}\+M\+A\+X\+\_\+\+R\+O\+O\+M\+S\mbox{]})}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_a54240ded328b857cf09a6964e49b556d}\label{main_8cpp_a54240ded328b857cf09a6964e49b556d}} 
+\index{main.cpp@{main.cpp}!report@{report}}
+\index{report@{report}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{Hotel\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Executing command to print a report. 
+
+Reads two dates, and prints how many days the room is used in that diapason. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_room_af4891122599ad46a6c39a26036422861}{Room\+::report\+Room()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_ab149e92becf583ac940f84c4b713010c}\label{main_8cpp_ab149e92becf583ac940f84c4b713010c}} 
+\index{main.cpp@{main.cpp}!resizeStr@{resizeStr}}
+\index{resizeStr@{resizeStr}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{resizeStr()}{resizeStr()}}
+{\footnotesize\ttfamily void resize\+Str (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{str,  }\item[{size\+\_\+t \&}]{size,  }\item[{size\+\_\+t \&}]{to }\end{DoxyParamCaption})}
+
+
+
+Resizes char$\ast$. 
+
+Enables writing endless notes. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{main_8cpp_a9b1c3fc755e890996d8535f3479bc485}{get\+Note()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{main_8cpp_a63ad18fe1516a5416764874330fcda7c}\label{main_8cpp_a63ad18fe1516a5416764874330fcda7c}} 
+\index{main.cpp@{main.cpp}!swap@{swap}}
+\index{swap@{swap}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void swap (\begin{DoxyParamCaption}\item[{T \&}]{t1,  }\item[{T \&}]{t2 }\end{DoxyParamCaption})}
+
+
+
+template function that swaps the values of two variables 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_aa89d41d0569f5f8e0e63ea94cdbb2b0f}\label{main_8cpp_aa89d41d0569f5f8e0e63ea94cdbb2b0f}} 
+\index{main.cpp@{main.cpp}!AVAILABLE\_CMD@{AVAILABLE\_CMD}}
+\index{AVAILABLE\_CMD@{AVAILABLE\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{AVAILABLE\_CMD}{AVAILABLE\_CMD}}
+{\footnotesize\ttfamily const char A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}availability\char`\"{}}
+
+
+
+Command for showing availability. 
+
+\mbox{\Hypertarget{main_8cpp_a4f3b56f8b8d5b6ca894d4acbd2bdcf6e}\label{main_8cpp_a4f3b56f8b8d5b6ca894d4acbd2bdcf6e}} 
+\index{main.cpp@{main.cpp}!CHECKIN\_CMD@{CHECKIN\_CMD}}
+\index{CHECKIN\_CMD@{CHECKIN\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CHECKIN\_CMD}{CHECKIN\_CMD}}
+{\footnotesize\ttfamily const char C\+H\+E\+C\+K\+I\+N\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}checkin\char`\"{}}
+
+
+
+Command for checkin. 
+
+\mbox{\Hypertarget{main_8cpp_a6b489b1c2f081de93fb40c812b9d9e37}\label{main_8cpp_a6b489b1c2f081de93fb40c812b9d9e37}} 
+\index{main.cpp@{main.cpp}!CHECKOUT\_CMD@{CHECKOUT\_CMD}}
+\index{CHECKOUT\_CMD@{CHECKOUT\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CHECKOUT\_CMD}{CHECKOUT\_CMD}}
+{\footnotesize\ttfamily const char C\+H\+E\+C\+K\+O\+U\+T\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}checkout\char`\"{}}
+
+
+
+Command for checkout. 
+
+\mbox{\Hypertarget{main_8cpp_a22a31e14c4e17aa5b9e64ce9dbc3d1c7}\label{main_8cpp_a22a31e14c4e17aa5b9e64ce9dbc3d1c7}} 
+\index{main.cpp@{main.cpp}!FIND\_CMD@{FIND\_CMD}}
+\index{FIND\_CMD@{FIND\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FIND\_CMD}{FIND\_CMD}}
+{\footnotesize\ttfamily const char F\+I\+N\+D\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}find\char`\"{}}
+
+
+
+Command for finding rooms. 
+
+\mbox{\Hypertarget{main_8cpp_af0b99c2645ce3ee193f16d40948ea574}\label{main_8cpp_af0b99c2645ce3ee193f16d40948ea574}} 
+\index{main.cpp@{main.cpp}!FIND\_URGENT\_CMD@{FIND\_URGENT\_CMD}}
+\index{FIND\_URGENT\_CMD@{FIND\_URGENT\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FIND\_URGENT\_CMD}{FIND\_URGENT\_CMD}}
+{\footnotesize\ttfamily const char F\+I\+N\+D\+\_\+\+U\+R\+G\+E\+N\+T\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}find!\char`\"{}}
+
+
+
+Command for finding rooms for someone important fast. 
+
+\mbox{\Hypertarget{main_8cpp_a3278a98040c388a69624a69e31ced264}\label{main_8cpp_a3278a98040c388a69624a69e31ced264}} 
+\index{main.cpp@{main.cpp}!MAX\_CHARLINE@{MAX\_CHARLINE}}
+\index{MAX\_CHARLINE@{MAX\_CHARLINE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_CHARLINE}{MAX\_CHARLINE}}
+{\footnotesize\ttfamily const size\+\_\+t M\+A\+X\+\_\+\+C\+H\+A\+R\+L\+I\+NE = 100}
+
+
+
+Max line of characters when entering command. 
+
+\begin{DoxyNote}{Note}
+will use this in some cases when we need to clean the buffer when the command turns to be shorter then expected. 
+\end{DoxyNote}
+\mbox{\Hypertarget{main_8cpp_af1df77c325cd61874d65c5d224904f55}\label{main_8cpp_af1df77c325cd61874d65c5d224904f55}} 
+\index{main.cpp@{main.cpp}!MAX\_COMMAND@{MAX\_COMMAND}}
+\index{MAX\_COMMAND@{MAX\_COMMAND}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_COMMAND}{MAX\_COMMAND}}
+{\footnotesize\ttfamily const size\+\_\+t M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND = 13}
+
+
+
+Max value of symbols a user command should have. According to the paper, the longest command has 13 symbols (including the teminating zero). 
+
+\mbox{\Hypertarget{main_8cpp_a4103f0a53003007385da6655929f4a9f}\label{main_8cpp_a4103f0a53003007385da6655929f4a9f}} 
+\index{main.cpp@{main.cpp}!MAX\_ROOMS@{MAX\_ROOMS}}
+\index{MAX\_ROOMS@{MAX\_ROOMS}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_ROOMS}{MAX\_ROOMS}}
+{\footnotesize\ttfamily const size\+\_\+t M\+A\+X\+\_\+\+R\+O\+O\+MS = 50}
+
+
+
+How many rooms the hotel has. Can be changed any time. 
+
+\mbox{\Hypertarget{main_8cpp_af19431eb3850446de644b7ab1a4ca82e}\label{main_8cpp_af19431eb3850446de644b7ab1a4ca82e}} 
+\index{main.cpp@{main.cpp}!NOTE\_DEF\_SIZE@{NOTE\_DEF\_SIZE}}
+\index{NOTE\_DEF\_SIZE@{NOTE\_DEF\_SIZE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{NOTE\_DEF\_SIZE}{NOTE\_DEF\_SIZE}}
+{\footnotesize\ttfamily const size\+\_\+t N\+O\+T\+E\+\_\+\+D\+E\+F\+\_\+\+S\+I\+ZE = 13}
+
+
+
+How many symbols the note has. 
+
+\begin{DoxyNote}{Note}
+Dont worry, it is resizing dynamically. 
+\end{DoxyNote}
+\mbox{\Hypertarget{main_8cpp_a449dc0d4e192da48e89332f1dcc38273}\label{main_8cpp_a449dc0d4e192da48e89332f1dcc38273}} 
+\index{main.cpp@{main.cpp}!REPORT\_CMD@{REPORT\_CMD}}
+\index{REPORT\_CMD@{REPORT\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{REPORT\_CMD}{REPORT\_CMD}}
+{\footnotesize\ttfamily const char R\+E\+P\+O\+R\+T\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}report\char`\"{}}
+
+
+
+Command for showing report. 
+
+\mbox{\Hypertarget{main_8cpp_a5b3b39c5721a585488de5647f9c8f640}\label{main_8cpp_a5b3b39c5721a585488de5647f9c8f640}} 
+\index{main.cpp@{main.cpp}!STOP\_CMD@{STOP\_CMD}}
+\index{STOP\_CMD@{STOP\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{STOP\_CMD}{STOP\_CMD}}
+{\footnotesize\ttfamily const char S\+T\+O\+P\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}close\char`\"{}}
+
+
+
+This command closes the command line. 
+
+\mbox{\Hypertarget{main_8cpp_a637a1f603c44e4ba3b420e5febd33eb4}\label{main_8cpp_a637a1f603c44e4ba3b420e5febd33eb4}} 
+\index{main.cpp@{main.cpp}!UNAVAILABLE\_CMD@{UNAVAILABLE\_CMD}}
+\index{UNAVAILABLE\_CMD@{UNAVAILABLE\_CMD}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{UNAVAILABLE\_CMD}{UNAVAILABLE\_CMD}}
+{\footnotesize\ttfamily const char U\+N\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+MD\mbox{[}\mbox{\hyperlink{main_8cpp_af1df77c325cd61874d65c5d224904f55}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+ND}}\mbox{]} = \char`\"{}unavailable\char`\"{}}
+
+
+
+Command for setting room unavailable. 
+
