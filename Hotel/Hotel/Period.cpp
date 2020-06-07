@@ -7,7 +7,7 @@ Period::Period()
 	endDate = Date(2020, 1, 1);
 }
 
-Period::Period(Date& const sd, Date& const ed)
+Period::Period(Date const& sd, Date const& ed)
 {
 	startDate = sd;
 	endDate = ed;
@@ -42,4 +42,7 @@ bool Period::isDateInPeriod(Date& const d) const
 	
 }
 
-
+std::ostream& operator<<(std::ostream& os, Period const& p)
+{
+	return os << p.getStartDate() << ' ' << p.getEndDate();
+}

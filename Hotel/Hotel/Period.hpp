@@ -17,7 +17,7 @@ public:
 	///The period currently consists of 0 days.
 	Period();
 	///Constructor.
-	Period(Date& const sd, Date& const ed);
+	Period(Date const& sd, Date const& ed);
 	///Gets days in this period. @see Date::operator-()
 	unsigned getDays() const;
 	///Assignes one Period to another
@@ -29,5 +29,7 @@ public:
 	///Checks if a Date is the current Period.
 	bool isDateInPeriod(Date& const) const;
 };
+
+std::ostream& operator<<(std::ostream& os, Period const& p);
 
 #endif

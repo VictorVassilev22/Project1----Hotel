@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.hpp" />
+    <ClInclude Include="Hotel.h" />
     <ClInclude Include="Period.hpp" />
     <ClInclude Include="Reservation.hpp" />
     <ClInclude Include="Room.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Hotel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Period.cpp" />
     <ClCompile Include="Reservation.cpp" />

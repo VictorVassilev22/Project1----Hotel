@@ -110,7 +110,30 @@ unsigned Date::operator-(Date const& other) const
 
 std::ostream& operator<<(std::ostream& out, Date const& d)
 {
-	return out << d.year << "-" << d.month << "-" << d.day;
+	if (d.month < 10) {
+		if (d.day < 10) {
+			return out << d.year << "-" << '0' << d.month << "-" <<'0'<< d.day;
+		}
+		return out << d.year << "-" << '0' << d.month << "-" << d.day;
+	}
+	else {
+		if (d.day < 10) {
+			return out << d.year << "-"<< d.month << "-" << '0' << d.day;
+		}
+		return out << d.year << "-" << d.month << "-" << d.day;
+	}
+}
+
+void setCurrentDate(Date& d)
+{
+	time_t now = time(0);
+	tm* current_day = localtime(&now);
+
+	unsigned year = current_day->tm_year + 1900;
+	unsigned month = current_day->tm_mon + 1;
+	unsigned day = current_day->tm_mday;
+
+	d = Date (year, month, day);
 }
 
 unsigned Date::getDaysBetween(Date sooner, Date later) const
@@ -161,6 +184,9 @@ void Date::swap(Date& d1, Date& d2) const
 }
 
 void Date::printDate(std::ostream& os) const{
+	if(month<10)
+		os << year << "-" <<'0'<< month << "-" << day;
+	else
 	os << year << "-" << month << "-" << day;
 }
 

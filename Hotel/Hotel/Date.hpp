@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<cmath>
+#include<ctime>
 
 /// The hotel can book rooms from MIN_YEAR.
 const unsigned MIN_YEAR = 2020;
@@ -16,6 +17,8 @@ const unsigned MAX_MONTH = 12;
 const unsigned MIN_MONTH = 1;
 /// Minimal value for day (1).
 const unsigned MIN_DAY = 1;
+/// Maximal value for day (31).
+const unsigned MAX_DAY = 31;
 /// How many sybols does a year representation contain (4 + 1 for the terminating zero).
 const unsigned YEAR_SYMBOLS = 5;
 /// How many sybols does a month representation contain(3 + 1 for the terminating zero).
@@ -54,10 +57,19 @@ public:
 	Date(Date const& other);
 	///Does the same as copy constructor but only if the objects Date are different
 	Date& operator=(Date const&);
+	/// <summary>
+	/// Operator == checks if the two objects ere equal
+	/// </summary>
+	/// <param name=""></param>
+	/// <returns></returns>
 	bool operator==(Date const&) const;
+	///@returns true if the left hand date is before the other chronologically
 	bool operator<(Date const&) const;
+	///@returns true if the left hand date is after the other chronologically
 	bool operator>(Date const&) const;
+	///@see Date::operator<(Date const&) const
 	bool operator<=(Date const&) const;
+	///@see Date::operator>(Date const&) const
 	bool operator>=(Date const&) const;
 	/// @see Date::getDaysBetween(Date, Date) const
 	unsigned operator-(Date const&) const;
@@ -70,5 +82,10 @@ public:
 };
 
 std::ostream& operator<<(std::ostream&, Date const&);
+/// <summary>
+/// Gets the current date using ctime and converts it to a Date object
+/// </summary>
+/// <param name="d"></param>
+void setCurrentDate(Date& d);
 
 #endif

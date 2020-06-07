@@ -3,12 +3,12 @@
 #include "Date.hpp"
 #include "Period.hpp"
 #include <iostream>
+#include <fstream>
 
 ///Realisation of Reservation class
 ///
 ///If someone wants to reserve a room they make reservation.
 ///Here are stored all the needful information aboit the Reservation.
-
 
 class Reservation {
 	/// Period of the reservation. How many days the guests will stay.
@@ -17,16 +17,18 @@ class Reservation {
 	char* note;
 	/// Is this reservation available, e.g is any guest there or it is set unavailable for a Period (e.g in construction or smth).
 	bool available;
-
+	//How many guests currently booked the room
+	unsigned guests_cnt;
 	/// Sets the note to the Reservation
 	void setNote(const char*);
 	///Clears dynamic allocated memory from the heap.
-	void clear(char*);
+	void clear(char*&);
 public:
 	/// The period is created by default. Note note is assigned to nullptr and available is currently true.
 	Reservation();
 	/// Sets Reservation::note, Reservation::period and Reservation::available (=true)
-	Reservation(Period& const, char const*, bool available = true);
+	Reservation(Period& const, char const*, bool available = true, unsigned guests_cnt = 0);
+	Reservation(Reservation& const other);
 	///Destructor clears all dynamically allocated memory @see clear(char*)
 	~Reservation();
 	/// @returns a copy of the current note
@@ -37,13 +39,19 @@ public:
 	Date getStartDate() const { return period.getStartDate(); }
 	/// @returns Period::getEndDate() of Reservation::period
 	Date getEndDate() const { return period.getEndDate(); }
+	/// @returns Reservation::period
+	Period getPeriod() const { return period; }
+	unsigned getGuestsCnt() const { return guests_cnt; }
 	/// @returns this->available
 	bool isAvailable() const { return available; }
 	/// @returns if the Period of this Reservation overlaps with another Period,
 	///so we can tell if the Period is free for this Reservation or not
 	bool overlap(Reservation& const other) const;
+	bool overlap(Period const& p) const;
 	/// @returns if a Date (say, a current day) is in this reservation @see Period::isDateInPeriod(Date& const) const
 	bool isDateInReservation(Date& const) const;
 };
+
+std::ostream& operator<<(std::ostream& os, Reservation const& p);
 
 #endif
